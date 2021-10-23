@@ -6,6 +6,8 @@ Use this template to quickly start creating, and deploying REST APIs on [Google 
 
 ## Getting Started
 
+Follow the steps below to create and deploy new REST API on Firebase.
+
 ### **1** - Create New Firebase Project
 
 Go to [Firebase Console](https://console.firebase.google.com) and create a new project, if you haven't already.
