@@ -6,15 +6,15 @@ Use this template to quickly start creating, and deploying REST APIs on [Google 
 
 ## Getting Started
 
-### Step 1: Create a new project
+### **Step 1**: Create a new Firebase project
 
-Go to [Firebase Console](https://console.firebase.google.com) and create a new project.
+Go to [Firebase Console](https://console.firebase.google.com) and create a new project, if you haven't already.
 
-### Step 2: Enable Firebase Cloud Functions
+### **Step 2**: Enable Firebase Cloud Functions
 
-Go to [Firebase Console](https://console.firebase.google.com) and enable Firebase Cloud Functions.
+In order to use Cloud Function, you must enable it from [Firebase Console](https://console.firebase.google.com).
 
-### Step 3: Add ProjectID
+### **Step 3**: Add ProjectID
 
 Add your project ID to the `.firebaserc` file.
 
@@ -28,16 +28,17 @@ File: `.firebaserc`
 }
 ```
 
-### Step 4: Install Dependencies
+### **Step 4**: Install Dependencies
 
 Install the required dependecies described in `api/package.json` using the commands below.
 
-```shell
+```sh
 cd api/
+npm install -g firebase-tools # required for Firebase CLI
 npm install
 ```
 
-### Step 5: Add Endpoints
+### **Step 5**: Add Endpoints
 
 Add your API Endpoints & Logic to `api/index.js`
 
@@ -59,6 +60,20 @@ app.get("/YOUR_ENDPOINT_URL", (request, response) => {
 ```
 
 Replace `FIREBASE_PROJECT_ID` with your Firebase Project ID
+
+### **Step 6**: Deploy to Firebase
+
+To deploy your API to Firebase, run the following commands inside the `api/` directory.
+
+```sh
+npm run deploy
+```
+
+OR, use the following command from any directory.
+
+```sh
+firebase deploy --only functions
+```
 
 ## Contributing
 
