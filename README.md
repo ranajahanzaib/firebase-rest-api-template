@@ -4,6 +4,62 @@
 
 Use this template to quickly start creating, and deploying REST APIs on [Google Firebase](https://firebase.google.com) & [Cloud Functions](https://firebase.google.com/products/functions).
 
+## Getting Started
+
+### Step 1: Create a new project
+
+Go to [Firebase Console](https://console.firebase.google.com) and create a new project.
+
+### Step 2: Enable Firebase Cloud Functions
+
+Go to [Firebase Console](https://console.firebase.google.com) and enable Firebase Cloud Functions.
+
+### Step 3: Add ProjectID
+
+Add your project ID to the `.firebaserc` file.
+
+File: `.firebaserc`
+
+```json
+{
+  "projects": {
+    "default": "FIREBASE_PROJECT_ID"
+  }
+}
+```
+
+### Step 4: Install Dependencies
+
+Install the required dependecies described in `api/package.json` using the commands below.
+
+```shell
+cd api/
+npm install
+```
+
+### Step 5: Add Endpoints
+
+Add your API Endpoints & Logic to `api/index.js`
+
+```js
+...
+// Remove the following line if you don't want to use the API version prefix
+main.use("/v1", app);
+...
+
+// Start adding your endpoints
+app.get("/YOUR_ENDPOINT_URL", (request, response) => {
+  const data = {
+    message: "Hello World!"
+  };
+  response.send(data);
+});
+
+...
+```
+
+Replace `FIREBASE_PROJECT_ID` with your Firebase Project ID
+
 ## Contributing
 
 We'd love to accept your patches and contributions to this project. There are just a few guidelines you need to follow.
