@@ -35,6 +35,7 @@ Install the required dependecies described in `api/package.json` using the comma
 ```sh
 cd api/
 npm install -g firebase-tools # required for Firebase CLI
+firebase login # Login to Firebase CLI
 npm install
 ```
 
