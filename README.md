@@ -72,7 +72,7 @@ To deploy your API to Firebase, run the following commands inside the `api/` dir
 npm run deploy
 ```
 
-OR, use the following command from any directory.
+OR, use the following command from any directory within the project repo.
 
 ```sh
 firebase deploy --only functions
