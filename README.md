@@ -6,7 +6,7 @@ Use this template to quickly start creating, and deploying REST APIs on [Google 
 
 ## Getting Started
 
-### **1**: Create a new Firebase project
+### **1** - Create New Firebase Project
 
 Go to [Firebase Console](https://console.firebase.google.com) and create a new project, if you haven't already.
 
@@ -62,7 +62,7 @@ app.get("/YOUR_ENDPOINT_URL", (request, response) => {
 ...
 ```
 
-### **6**: Deploy to Firebase
+### **6**: Deploy API Function to Firebase
 
 To deploy your API to Firebase, run the following commands inside the `api/` directory.
 
