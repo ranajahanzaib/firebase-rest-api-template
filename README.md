@@ -46,7 +46,7 @@ Add your API Endpoints & Logic to `api/index.js`
 ```js
 ...
 // Remove the following line if you don't want to use the API version prefix
-main.use("/v1", app);
+main.use("/v1", app);  // e.g https://api.domain.com/v1/ENDPOINTS
 ...
 
 // Start adding your endpoints
