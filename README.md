@@ -28,6 +28,8 @@ File: `.firebaserc`
 }
 ```
 
+Replace `FIREBASE_PROJECT_ID` with your Firebase Project ID
+
 ### **4**: Install Dependencies
 
 Install the required dependecies described in `api/package.json` using the commands below.
@@ -59,8 +61,6 @@ app.get("/YOUR_ENDPOINT_URL", (request, response) => {
 
 ...
 ```
-
-Replace `FIREBASE_PROJECT_ID` with your Firebase Project ID
 
 ### **6**: Deploy to Firebase
 
