@@ -2,8 +2,6 @@ const functions = require("firebase-functions");
 const express = require("express");
 const bodyParser = require("body-parser");
 
-admin.initializeApp(functions.config().firebase);
-
 const app = express();
 const main = express();
 
