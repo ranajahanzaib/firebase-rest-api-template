@@ -12,11 +12,7 @@ Follow the steps below to create and deploy new REST API on Firebase.
 
 Go to [Firebase Console](https://console.firebase.google.com) and create a new project, if you haven't already.
 
-### **2**: Enable Firebase Cloud Functions
-
-In order to use Cloud Function, you must enable it from [Firebase Console](https://console.firebase.google.com).
-
-### **3**: Add ProjectID
+### **2**: Add ProjectID
 
 Add your project ID to the `.firebaserc` file.
 
@@ -32,7 +28,7 @@ File: `.firebaserc`
 
 Replace `FIREBASE_PROJECT_ID` with your Firebase Project ID
 
-### **4**: Install Dependencies
+### **3**: Install Dependencies
 
 Install the required dependecies described in `api/package.json` using the commands below.
 
@@ -43,7 +39,7 @@ firebase login # Login to Firebase CLI, required once
 npm install
 ```
 
-### **5**: Add Endpoints
+### **4**: Add Endpoints
 
 Add your API Endpoints & Logic to `api/index.js`
 
@@ -64,7 +60,7 @@ app.get("/YOUR_ENDPOINT_URL", (request, response) => {
 ...
 ```
 
-### **6**: Deploy API Function to Firebase
+### **5**: Deploy API Function to Firebase
 
 To deploy your API to Firebase, run the following commands inside the `api/` directory.
 
