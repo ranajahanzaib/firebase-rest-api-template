@@ -5,12 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const main = express();
 
-// It's important to keep the prefix here. In case you don't want
-// to use the prefix "v1", use empty string as "". Otherwise, all
-// routes would result in 404.
-// More info: https://bit.ly/3Fjp0Kz
-main.use("/v1", app); // This adds the prefix `/v1` to all routes
-
+main.use(app); // replace with main.use('/v1', app) to enable versioning
 main.use(bodyParser.urlencoded({ extended: true }));
 main.use(bodyParser.json());
 
