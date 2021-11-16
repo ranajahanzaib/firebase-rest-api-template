@@ -16,6 +16,10 @@ main.use(bodyParser.json());
 
 const cacheCntrlHeaders = "public, max-age=300, s-maxage=600";
 
+app.get("/", (request, response) => {
+  response.send(`Hello, World!`);
+});
+
 app.get("/timestamp", (request, response) => {
   response.send(`${Date.now()}`);
 });
