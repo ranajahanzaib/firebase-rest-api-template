@@ -34,7 +34,7 @@ Install the required dependecies described in `api/package.json` using the comma
 
 ```sh
 cd api/
-npm install -g firebase-tools # required for Firebase CLI
+npm install -g firebase-tools # Install Firebase CLI, required once
 firebase login # Login to Firebase CLI, required once
 npm install
 ```
@@ -44,10 +44,6 @@ npm install
 Add your API Endpoints & Logic to `api/index.js`
 
 ```js
-...
-// Remove the following line if you don't want to use the API version prefix
-main.use("/v1", app);  // e.g https://api.domain.com/v1/ENDPOINTS
-...
 
 // Start adding your endpoints
 app.get("/YOUR_ENDPOINT_URL", (request, response) => {
