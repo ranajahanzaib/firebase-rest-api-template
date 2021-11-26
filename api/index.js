@@ -11,17 +11,17 @@ main.use(bodyParser.json());
 
 const cacheCntrlHeaders = "public, max-age=300, s-maxage=600";
 
-app.get("/", (request, response) => {
-  response.send(`Hello, World!`);
+app.get("/", (req, res) => {
+  res.send(`Hello, World!`);
 });
 
-app.get("/timestamp", (request, response) => {
-  response.send(`${Date.now()}`);
+app.get("/timestamp", (req, res) => {
+  res.send(`${Date.now()}`);
 });
 
-app.get("/timestamp-cached", (request, response) => {
-  response.set("Cache-Control", cacheCntrlHeaders);
-  response.send(`${Date.now()}`);
+app.get("/timestamp-cached", (req, res) => {
+  res.set("Cache-Control", cacheCntrlHeaders);
+  res.send(`${Date.now()}`);
 });
 
 exports.api = functions.https.onRequest(main);
